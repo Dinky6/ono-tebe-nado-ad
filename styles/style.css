@@ -1,14 +1,20 @@
+/* Сначала шрифты */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+/* Сброс стилей и базовые настройки */
 * {
     margin: 0;
     padding: 0;
     font-family: 'Raleway', Helvetica, sans-serif;
 }
 
-header, main, footer{
+/* Общие стили для основных блоков */
+header, main, footer {
     width: 1100px;
     margin: 0 auto;
 }
 
+/* Стили для шапки */
 header {
     display: flex;
     justify-content: space-between;
@@ -39,7 +45,7 @@ header ul li:first-child {
     list-style-type: none;
 }
 
-header a, footer a{
+header a, footer a {
     color: #000000;
 }
 
@@ -52,52 +58,27 @@ header address {
     margin-right: 50px;
 }
 
-.footer {
-    width: 1100px;
-    margin: 0 auto;
-    padding: 50px 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: start;
-}
-
-.footer .address {
-    font-style: normal;
-    text-align: left;
-}
-
-.footer__menu {
+/* Стили для подвала */
+footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    height: 293px;
+    position: relative; 
 }
 
-.footer__menu-list {
-    list-style: none;
-    text-align: center;
+footer address {
+    font-style: normal;
+    margin-left: 50px;
 }
 
-.footer__menu-list-item {
-    margin-bottom: 10px;
-}
-
-.footer__menu-link {
-    color: #000;
+footer ul {
+    list-style-type: none;
     text-transform: lowercase;
 }
 
-.footer__menu-link_active {
-    text-decoration: none;
-}
-
-.footer__social-list {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    gap: 48px;
-}
-
-.footer__social-icon {
-    width: 48px;
+footer nav ul li {
+    text-align: center;
 }
 
 .network {
@@ -116,6 +97,7 @@ a.active {
     text-decoration: none;
 }
 
+/* Стили для главного баннера */
 .overlay {
     position: absolute;
     inset: 0;
@@ -127,7 +109,7 @@ a.active {
     position: relative; 
     background: url('../images/cover.jpg');
     background-size: cover;
-    min-height: 500px;
+    min-height: 757px; /* Высота первого блока */
     padding: 100px 20px;
 }
 
@@ -185,10 +167,12 @@ a.active {
     text-transform: uppercase;
 }
 
+/* Секция с карточками */
 .lots {
     width: 1100px;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 180px 0 0 0; /* Верхний отступ 180px */
+    min-height: 723px; /* Высота второго блока */
 }
 
 .lots__heading {
@@ -269,10 +253,12 @@ a.active {
     color: #000;
 }
 
+/* Секция "Об аукционе" */
 .about {
     width: 1100px;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 120px 0 0 0; /* Верхний отступ 120px */
+    min-height: 595px; /* Высота третьего блока */
     display: grid;
     grid-template-columns: 350px 1fr;
     gap: 25px;
@@ -313,4 +299,51 @@ a.active {
     margin-bottom: 25px;
 }
 
-/*
+/* Подвал сайта */
+.footer {
+    width: 1100px;
+    margin: 0 auto;
+    padding: 180px 0 90px; /* Верхний отступ 180px */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+}
+
+.footer .address {
+    font-style: normal;
+    text-align: left;
+}
+
+.footer__menu {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__menu-list {
+    list-style: none;
+    text-align: center;
+}
+
+.footer__menu-list-item {
+    margin-bottom: 10px;
+}
+
+.footer__menu-link {
+    color: #000;
+    text-transform: lowercase;
+}
+
+.footer__menu-link_active {
+    text-decoration: none;
+}
+
+.footer__social-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 48px;
+}
+
+.footer__social-icon {
+    width: 48px;
+}
