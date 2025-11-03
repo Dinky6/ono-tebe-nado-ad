@@ -13,7 +13,7 @@
 header,
 main,
 footer {
-    width: 1100px; /* Фиксированная ширина 1100px */
+    width: 1100px;
     margin: 0 auto;
 }
 
@@ -30,7 +30,9 @@ header {
 header img {
     width: 148px;
     position: absolute;
-    inset: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Центрируем логотип */
     margin: auto;
 }
 
@@ -62,8 +64,9 @@ footer ul li a:hover {
 
 header address {
     font-style: normal;
-    text-align: right;
+    text-align: right; /* Выравнивание контактов по правому краю */
     font-size: 18px;
+    width: 100%; /* Чтобы выравнивание работало правильно */
 }
 
 header address a {
@@ -131,7 +134,7 @@ a.active {
     background-size: cover;
     background-position: center;
     height: 757px;
-    width: 1100px; /* Фиксированная ширина */
+    width: 1100px;
     margin: 0 auto;
 }
 
@@ -142,9 +145,8 @@ a.active {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 165px 50px 50px 50px;
-    width: 1100px; /* Фиксированная ширина */
+    padding: 0 50px 50px 50px; /* Убираем верхний паддинг */
+    width: 1100px;
     margin: 0 auto;
 }
 
@@ -157,26 +159,31 @@ a.active {
     font-weight: bold;
     letter-spacing: 0.3em;
     line-height: 1;
-    word-spacing: 20px; /* Расстояние между словами 20px */
+    word-spacing: 20px;
 }
 
 .first-string {
     text-align: left;
     margin-left: 0;
+    margin-top: 165px; /* Отступ от верха картинки */
 }
 
 .second-string {
     text-align: center;
+    margin-top: 20px; /* Отступ от "Оно" до "Тебе" */
+    padding-top: 115px; /* 300 - 165 - 20 = 115px чтобы итого 300 от верха */
 }
 
 .third-string {
     text-align: right;
     margin-right: 0;
+    margin-top: 20px; /* Отступ от "Тебе" до "Надо" */
+    padding-top: 115px; /* 435 - 300 - 20 = 115px чтобы итого 435 от верха */
 }
 
 .description {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     font-size: 22px;
     text-transform: uppercase;
@@ -185,8 +192,10 @@ a.active {
     margin-top: auto;
 }
 
-.description p {
-    margin: 0;
+.description-text {
+    width: 637px; /* Фиксированная ширина текста */
+    text-align: center; /* Выравнивание по центру */
+    margin: 0 auto; /* Центрирование */
 }
 
 .description button {
@@ -196,13 +205,13 @@ a.active {
     padding: 12px 32px;
     font-size: 22px;
     text-transform: uppercase;
-    margin-left: 78px;
     white-space: nowrap;
+    margin-left: 78px;
 }
 
 /* Секция с карточками */
 .lots {
-    width: 1100px; /* Фиксированная ширина */
+    width: 1100px;
     margin: 0 auto;
     padding: 180px 0 0 0;
     min-height: 723px;
@@ -213,6 +222,7 @@ a.active {
     text-transform: uppercase;
     margin-bottom: 30px;
     margin-left: 50px;
+    margin-right: 64px; /* Отступ от правого края 64px */
 }
 
 .lots__card-list {
@@ -281,19 +291,19 @@ a.active {
 }
 
 .lots__look-more-link {
-    margin-left: 74px; /* 50px + 24px отступа карточек */
+    margin-left: 74px;
     font-size: 20px;
     text-decoration: underline;
     color: #000;
     display: block;
-    margin-top: 120px; /* Расстояние от карточек 120px */
+    margin-top: 30px; /* Отступ от карточки 30px */
 }
 
 /* Секция "Об аукционе" */
 .about {
-    width: 1100px; /* Фиксированная ширина */
+    width: 1100px;
     margin: 0 auto;
-    padding: 120px 0 0 0; /* Отступ от ссылки "Посмотреть больше" 120px */
+    padding: 155px 0 0 0; /* Расстояние от ссылки "Посмотреть больше" 155px */
     min-height: 775px;
     display: grid;
     grid-template-columns: 350px 1fr;
@@ -338,9 +348,9 @@ a.active {
 
 /* Подвал сайта */
 .footer {
-    width: 1100px; /* Фиксированная ширина */
+    width: 1100px;
     margin: 0 auto;
-    padding: 180px 0 0 0; /* Расстояние от начала футера до текста блока об аукционе 180px */
+    padding: 180px 0 0 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: start;
