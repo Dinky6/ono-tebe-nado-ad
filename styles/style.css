@@ -44,6 +44,7 @@ header ul {
 
 header ul li {
     margin-right: 32px;
+    white-space: nowrap; /* Убираем переносы в меню */
 }
 
 header ul li:first-child {
@@ -64,9 +65,10 @@ footer ul li a:hover {
 
 header address {
     font-style: normal;
-    text-align: right; /* Выравнивание контактов по правому краю */
+    text-align: left; /* Выравнивание контактов по правому краю */
     font-size: 18px;
     width: 100%; /* Чтобы выравнивание работало правильно */
+    margin-left: 368px
 }
 
 header address a {
@@ -170,15 +172,13 @@ a.active {
 
 .second-string {
     text-align: center;
-    margin-top: 20px; /* Отступ от "Оно" до "Тебе" */
-    padding-top: 115px; /* 300 - 165 - 20 = 115px чтобы итого 300 от верха */
+    margin-top: 20px; 
 }
 
 .third-string {
     text-align: right;
     margin-right: 0;
-    margin-top: 20px; /* Отступ от "Тебе" до "Надо" */
-    padding-top: 115px; /* 435 - 300 - 20 = 115px чтобы итого 435 от верха */
+    margin-top: 20px; 
 }
 
 .description {
@@ -196,6 +196,7 @@ a.active {
     width: 637px; /* Фиксированная ширина текста */
     text-align: center; /* Выравнивание по центру */
     margin: 0 auto; /* Центрирование */
+    white-space: nowrap; /* Убираем перенос строки */
 }
 
 .description button {
