@@ -6,13 +6,14 @@
     margin: 0;
     padding: 0;
     font-family: 'Raleway', Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 /* Общие стили для основных блоков */
 header,
 main,
 footer {
-    width: 1100px;
+    width: 1100px; /* Фиксированная ширина 1100px */
     margin: 0 auto;
 }
 
@@ -23,7 +24,7 @@ header {
     align-items: center;
     height: 293px;
     position: relative;
-    padding: 0 50px; /* Добавляем отступы по бокам */
+    padding: 0 50px;
 }
 
 header img {
@@ -130,6 +131,8 @@ a.active {
     background-size: cover;
     background-position: center;
     height: 757px;
+    width: 1100px; /* Фиксированная ширина */
+    margin: 0 auto;
 }
 
 .cover {
@@ -140,8 +143,9 @@ a.active {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 165px 50px 50px 50px; /* Верхний отступ 165px, нижний 50px */
-    box-sizing: border-box;
+    padding: 165px 50px 50px 50px;
+    width: 1100px; /* Фиксированная ширина */
+    margin: 0 auto;
 }
 
 .first-string,
@@ -153,6 +157,7 @@ a.active {
     font-weight: bold;
     letter-spacing: 0.3em;
     line-height: 1;
+    word-spacing: 20px; /* Расстояние между словами 20px */
 }
 
 .first-string {
@@ -192,11 +197,12 @@ a.active {
     font-size: 22px;
     text-transform: uppercase;
     margin-left: 78px;
+    white-space: nowrap;
 }
 
 /* Секция с карточками */
 .lots {
-    width: 1100px;
+    width: 1100px; /* Фиксированная ширина */
     margin: 0 auto;
     padding: 180px 0 0 0;
     min-height: 723px;
@@ -215,13 +221,13 @@ a.active {
     gap: 25px;
     list-style: none;
     margin-bottom: 30px;
-    padding: 0 24px; /* Отступы от правого и левого края */
+    padding: 0 24px;
 }
 
 .lots__card-list-item {
-    width: 334px; /* Новая ширина карточек */
-    min-height: 596px; /* Новая высота карточек */
-    flex-grow: 1;
+    width: 334px;
+    min-height: 596px;
+    flex-shrink: 0;
 }
 
 .card-link {
@@ -238,7 +244,6 @@ a.active {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-sizing: border-box;
 }
 
 .card .overlay {
@@ -280,14 +285,16 @@ a.active {
     font-size: 20px;
     text-decoration: underline;
     color: #000;
+    display: block;
+    margin-top: 120px; /* Расстояние от карточек 120px */
 }
 
 /* Секция "Об аукционе" */
 .about {
-    width: 1100px;
+    width: 1100px; /* Фиксированная ширина */
     margin: 0 auto;
-    padding: 120px 0 0 0;
-    min-height: 775px; /* Увеличили высоту с 595px до 775px */
+    padding: 120px 0 0 0; /* Отступ от ссылки "Посмотреть больше" 120px */
+    min-height: 775px;
     display: grid;
     grid-template-columns: 350px 1fr;
     gap: 25px;
@@ -331,9 +338,9 @@ a.active {
 
 /* Подвал сайта */
 .footer {
-    width: 1100px;
+    width: 1100px; /* Фиксированная ширина */
     margin: 0 auto;
-    padding: 180px 0 0 0; /* Возвращаем верхний отступ */
+    padding: 180px 0 0 0; /* Расстояние от начала футера до текста блока об аукционе 180px */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: start;
