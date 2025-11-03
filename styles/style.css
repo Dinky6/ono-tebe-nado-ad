@@ -9,7 +9,9 @@
 }
 
 /* Общие стили для основных блоков */
-header, main, footer {
+header,
+main,
+footer {
     width: 1100px;
     margin: 0 auto;
 }
@@ -20,7 +22,7 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 293px;
-    position: relative; 
+    position: relative;
 }
 
 header img {
@@ -45,11 +47,13 @@ header ul li:first-child {
     list-style-type: none;
 }
 
-header a, footer a {
+header a,
+footer a {
     color: #000000;
 }
 
-header ul li a:hover, footer ul li a:hover {
+header ul li a:hover,
+footer ul li a:hover {
     color: #b00707;
 }
 
@@ -63,8 +67,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 293px;
-    position: relative; 
+    height: 180px; /* Исправленная высота футера */
+    position: relative;
 }
 
 footer address {
@@ -101,34 +105,39 @@ a.active {
 .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6); 
-    z-index: 1; 
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
 .cover-section {
-    position: relative; 
+    position: relative;
     background: url('../images/cover.jpg');
     background-size: cover;
-    min-height: 757px; /* Высота первого блока */
+    min-height: 757px;
     padding: 100px 20px;
 }
 
 .cover {
-    position: relative; 
-    z-index: 2; 
-    color: white; 
+    position: relative;
+    z-index: 2;
+    color: white;
 }
 
-.first-string, .second-string, .third-string, .description {
+.first-string,
+.second-string,
+.third-string,
+.description {
     margin: 20px 25px 20px 50px;
 }
 
-.first-string, .second-string, .third-string {
+.first-string,
+.second-string,
+.third-string {
     display: block;
-    font-size: 100px; 
-    text-transform: uppercase;   
+    font-size: 100px;
+    text-transform: uppercase;
     font-family: 'Raleway', Helvetica, sans-serif;
-    font-weight: bold; 
+    font-weight: bold;
     letter-spacing: 0.3em;
     margin: 20px 25px 20px 50px;
 }
@@ -150,8 +159,8 @@ a.active {
     align-items: center;
     position: absolute;
     margin-top: 80px;
-    font-size: 22px; 
-    text-transform: uppercase; 
+    font-size: 22px;
+    text-transform: uppercase;
     word-spacing: 0.9em;
     font-family: 'Raleway', Helvetica, sans-serif;
     font-weight: normal;
@@ -159,11 +168,11 @@ a.active {
 
 .description button {
     margin-left: 107px;
-    background: transparent; 
-    border: 2px solid white; 
-    color: white; 
-    padding: 12px 32px; 
-    font-size: 22px; 
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 12px 32px;
+    font-size: 22px;
     text-transform: uppercase;
 }
 
@@ -171,8 +180,8 @@ a.active {
 .lots {
     width: 1100px;
     margin: 0 auto;
-    padding: 180px 0 0 0; /* Верхний отступ 180px */
-    min-height: 723px; /* Высота второго блока */
+    padding: 180px 0 0 0;
+    min-height: 723px;
 }
 
 .lots__heading {
@@ -257,8 +266,8 @@ a.active {
 .about {
     width: 1100px;
     margin: 0 auto;
-    padding: 120px 0 0 0; /* Верхний отступ 120px */
-    min-height: 595px; /* Высота третьего блока */
+    padding: 120px 0 0 0;
+    min-height: 595px;
     display: grid;
     grid-template-columns: 350px 1fr;
     gap: 25px;
@@ -303,10 +312,11 @@ a.active {
 .footer {
     width: 1100px;
     margin: 0 auto;
-    padding: 180px 0 90px; /* Верхний отступ 180px */
+    padding: 180px 0 0 0; /* Убрали нижний паддинг, оставили только верхний */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: start;
+    height: 180px; /* Высота футера */
 }
 
 .footer .address {
